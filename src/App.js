@@ -1,13 +1,11 @@
 import Navbar from "./Component/Navbar/Navbar";
-import Intro from "./Pages/Intro/Intro";
-import Services from "./Pages/Services/Services";
+
 import "./App.css";
-import Portfolio from "./Pages/Portfolio/Portfolio";
-import Contact from "./Pages/Contact/Contact";
-import Footer from "./Component/Footer/Footer";
+
 import { useContext } from "react";
 import { themeContext } from "./Context";
-
+import Router from "./routes/Router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -19,12 +17,19 @@ function App() {
         color: darkMode ? "white" : "",
       }}
     >
-      <Navbar />
-      <Intro />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          {Router.map((route) => (
+            <Route path={route.path} element={<route.element />} />
+          ))}
+          {/* <Route path="/" element={<Banner />} />
+          <Route path="/project" element={<PortfolioWrapper />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/contacts" element={<Contact />} /> */}
+        </Routes>
+        {/* <Footer /> */}
+      </BrowserRouter>
     </div>
   );
 }

@@ -89,5 +89,7 @@
   }
   .portfolio_card {
     width: 100%;
+    margin: 0;
+    margin: 20px 0;
   }
 }
