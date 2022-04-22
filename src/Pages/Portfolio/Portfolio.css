@@ -87,7 +87,9 @@
     margin-top: 40px;
     justify-content: space-around;
   }
-  .portfolio_cards {
+  .portfolio_card {
     width: 100%;
+    margin: 0;
+    margin: 20px 0;
   }
 }

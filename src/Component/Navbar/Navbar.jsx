@@ -1,52 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
-import { Link } from "react-scroll";
-const navbar = () => {
+
+import { Link } from "react-router-dom";
+function Navbar() {
+  const [isMobile, setIsMobile] = useState(false);
   return (
-    <div className="n-wrapper" id="Navbar">
-      {/* left */}
-      <div className="n-left">
-        <div className="n-name">
-          <p>PBS</p>
+    <>
+      <div className="n-wrapper" id="Navbar">
+        {/* left */}
+        <div className="n-left">
+          <div className="n-name">
+            <p>PBS</p>
+          </div>
+          <Toggle />
         </div>
-        <Toggle />
-      </div>
-      {/* right */}
-      <div className="n-right">
-        <div className="n-list">
-          <ul style={{ listStyleType: "none" }}>
-            <li>
-              <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="services" spy={true} smooth={true}>
-                Serivces
-              </Link>
-            </li>
+        {/* right */}
+        <div className="n-right">
+          <div className={isMobile ? "nav-links-mobile" : "n-list"}>
+            <ul
+              style={{ listStyleType: "none" }}
+              onClick={() => setIsMobile(false)}
+            >
+              <li>
+                <Link activeClass="active" to="/">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/services">Serivces</Link>
+              </li>
 
-            <li>
-              <Link to="portfolio" spy={true} smooth={true}>
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link to="Blog" spy={true} smooth={true}>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="contact" spy={true} smooth={true}>
-                Contact
-              </Link>
-            </li>
-          </ul>
+              <li>
+                <Link to="/portfolio" className="portfolio">
+                  Portfolio
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
+          <button
+            className="mobile-menu-icon"
+            onClick={() => setIsMobile(!isMobile)}
+          >
+            {isMobile ? (
+              <i class="fa-solid fa-xmark"></i>
+            ) : (
+              <i className="fa-solid fa-bars"></i>
+            )}
+          </button>
         </div>
       </div>
-    </div>
+    </>
   );
-};
+}
 
-export default navbar;
+export default Navbar;

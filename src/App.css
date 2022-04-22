@@ -24,6 +24,7 @@
   color: white;
   font-size: 16px;
   padding: 11px 26px 11px 26px;
+  z-index: 3;
 }
 
 .button:hover {
