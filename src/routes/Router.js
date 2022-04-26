@@ -1,8 +1,9 @@
 import Intro from "../Pages/Intro/Intro";
 import Services from "../Pages/Services/Services";
-import Portfolio from "../Pages/Portfolio/Portfolio";
+// import Portfolio from "../Pages/Portfolio/Portfolio";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
+import PortfolioWrapper from "../Pages/Portfolio/PortfolioWrapper";
 const Routes = [
   {
     path: "/",
@@ -14,7 +15,7 @@ const Routes = [
   },
   {
     path: "/portfolio",
-    element: Portfolio,
+    element: PortfolioWrapper,
   },
 
   {

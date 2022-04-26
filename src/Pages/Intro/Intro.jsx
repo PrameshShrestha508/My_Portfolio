@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
 import "./Intro.css";
+import Type from "./Type";
 import me from "../../Assets/Images/me.png";
 import Github from "../../Assets/Images/github.png";
 import LinkedIn from "../../Assets/Images/linkedin.png";
 import Instagram from "../../Assets/Images/instagram.png";
 import { themeContext } from "../../Context";
 import Services from "../../Pages/Services/Services";
-import Portfolio from "../../Pages/Portfolio/Portfolio";
+// import Portfolio from "../../Pages/Portfolio/Portfolio";
 import Contact from "../../Pages/Contact/Contact";
-
+import Footer from "../../Component/Footer/Footer";
 import { Link } from "react-scroll";
+import PortfolioWrapper from "../Portfolio/PortfolioWrapper";
+// import Footer from "../Footer/Footer";
 const Intro = () => {
   // Transition
 
@@ -24,7 +27,9 @@ const Intro = () => {
         <div className="i-left">
           <div className="i-name">
             <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-            <span>Pramesh Shrestha</span>
+            <span className="type">
+              <Type />
+            </span>
             <span>
               Reliable Intern studying BSC CSIT doing an internship in Optimum
               Futurist with the aim of expanding skills and gain valuable
@@ -65,8 +70,9 @@ const Intro = () => {
         </div>
       </div>
       <Services />
-      <Portfolio />
+      <PortfolioWrapper />
       <Contact />
+      <Footer />
     </>
   );
 };

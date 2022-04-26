@@ -21,8 +21,13 @@
   gap: 2rem;
 }
 
-@media screen and (max-width: 480px){
-  .f-content{
-    transform: scale(.5);
+@media screen and (max-width: 480px) {
+  .f-content {
+    transform: scale(0.5);
+  }
+  .footer .f-content {
+    float: none; /* Ensure stacking */
+    display: block; /* Ensure stacking */
+    text-align: center;
   }
 }

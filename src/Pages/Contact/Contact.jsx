@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./Contact.css";
 import axios from "axios";
+
 // import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
 const Contact = () => {
@@ -53,65 +54,67 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-form" id="contact">
-      {/* left side copy and paste from work section */}
-      <div className="w-left">
-        <div className="awesome">
-          {/* darkMode */}
-          <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
-          <span>Contact me</span>
-          <div
-            className="blur s-blur1"
-            style={{ background: "#ABF1FF94" }}
-          ></div>
+    <>
+      <div className="contact-form" id="contact">
+        {/* left side copy and paste from work section */}
+        <div className="w-left">
+          <div className="awesome">
+            {/* darkMode */}
+            <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
+            <span>Contact me</span>
+            <div
+              className="blur s-blur1"
+              style={{ background: "#ABF1FF94" }}
+            ></div>
+          </div>
+        </div>
+        {/* right side form */}
+        <div className="c-right">
+          <form method="POST">
+            <input
+              type="text"
+              name="name"
+              onChange={(e) => handleChange(e, "name")}
+              onBlur={checkValidate}
+              value={formValues.name}
+              className="user"
+              placeholder="Name"
+            />
+            <span style={{ color: "red" }}>{formErrors.name}</span>
+            <input
+              type="email"
+              name="email"
+              className="user"
+              onChange={(e) => handleChange(e, "email")}
+              onBlur={checkValidate}
+              value={formValues.email}
+              placeholder="Email"
+            />
+            <span style={{ color: "red" }}>{formErrors.email}</span>
+            <textarea
+              name="textarea"
+              className="user"
+              onChange={(e) => handleChange(e, "textarea")}
+              onBlur={checkValidate}
+              value={formValues.textarea}
+              placeholder="Message"
+            />
+            {formErrors.textarea}
+            <input
+              type="submit"
+              onClick={handleSubmit}
+              value="Send"
+              className="button"
+            />
+            {/* <span>{"Thanks for Contacting me"}</span> */}
+            <div
+              className="blur c-blur1"
+              style={{ background: "var(--purple)" }}
+            ></div>
+          </form>
         </div>
       </div>
-      {/* right side form */}
-      <div className="c-right">
-        <form method="POST">
-          <input
-            type="text"
-            name="name"
-            onChange={(e) => handleChange(e, "name")}
-            onBlur={checkValidate}
-            value={formValues.name}
-            className="user"
-            placeholder="Name"
-          />
-          <span style={{ color: "red" }}>{formErrors.name}</span>
-          <input
-            type="email"
-            name="email"
-            className="user"
-            onChange={(e) => handleChange(e, "email")}
-            onBlur={checkValidate}
-            value={formValues.email}
-            placeholder="Email"
-          />
-          <span style={{ color: "red" }}>{formErrors.email}</span>
-          <textarea
-            name="textarea"
-            className="user"
-            onChange={(e) => handleChange(e, "textarea")}
-            onBlur={checkValidate}
-            value={formValues.textarea}
-            placeholder="Message"
-          />
-          {formErrors.textarea}
-          <input
-            type="submit"
-            onClick={handleSubmit}
-            value="Send"
-            className="button"
-          />
-          {/* <span>{"Thanks for Contacting me"}</span> */}
-          <div
-            className="blur c-blur1"
-            style={{ background: "var(--purple)" }}
-          ></div>
-        </form>
-      </div>
-    </div>
+    </>
   );
 };
 

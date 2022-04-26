@@ -1,0 +1,44 @@
+.aboutImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutImage {
+  height: 150px;
+  width: 150px;
+  background-image: url("../../Assets/Images/me.png");
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: 2px solid rgba(165, 42, 42, 0.812);
+}
+.aboutImageWrapper h1 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #6e5cd4d7;
+  padding-left: 18px;
+}
+.aboutImageWrapper p {
+  width: 50vw;
+  font-size: 16px;
+  /* text-align: left; */
+}
+.aboutImageWrapper span {
+  font-weight: bold;
+}
+.aboutIcon {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3vw;
+}
+.aboutIcon i {
+  font-size: 2.6vw;
+  color: #6e5cd4d7;
+}
