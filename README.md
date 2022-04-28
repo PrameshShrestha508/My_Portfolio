@@ -11,6 +11,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+     "typewriter-effect": "^2.18.2",
 ```
 # Getting Started
 Clone down this repository. You will need node.js and git installed globally on your machine.
