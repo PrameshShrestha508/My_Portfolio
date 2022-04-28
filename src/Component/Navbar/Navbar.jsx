@@ -11,7 +11,9 @@ function Navbar() {
         {/* left */}
         <div className="n-left">
           <div className="n-name">
-            <p>PBS</p>
+            <Link activeClass="active" to="/">
+              <p>PBS</p>
+            </Link>
           </div>
           <Toggle />
         </div>

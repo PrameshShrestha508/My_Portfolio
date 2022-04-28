@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Cards from "./Cards";
+import Cards from "../../Component/PortfolioCard/PortfolioCard";
 import "./Portfolio.css";
 
 import "swiper/css";
 import Coffee from "../../Assets/Images/coffee.png";
-// import Culinary from "../../Assets/Images/culinary.png";
-// import zodiac from "../../Assets/Images/zodiac.png";
-// import TruthDare from "../../Assets/Images/truthdare.png";
-// import { themeContext } from "../../Context";
 const Portfolio = () => {
-  // const theme = useContext(themeContext);
-  // const darkMode = theme.state.darkMode;
   const [post, setPost] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {

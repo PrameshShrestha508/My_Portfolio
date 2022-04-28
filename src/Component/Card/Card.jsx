@@ -7,7 +7,7 @@ const Card = ({ image, heading, detail, color }) => {
       <img src={image} alt="" />
       <span>{heading}</span>
       <span>{detail}</span>
-      <button className="c-button">LEARN MORE</button>
+      {/* <button className="c-button">LEARN MORE</button> */}
     </div>
   );
 };

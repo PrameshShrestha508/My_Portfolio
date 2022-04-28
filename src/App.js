@@ -23,12 +23,7 @@ function App() {
           {Router.map((route) => (
             <Route path={route.path} element={<route.element />} />
           ))}
-          {/* <Route path="/" element={<Banner />} />
-          <Route path="/project" element={<PortfolioWrapper />} />
-          <Route path="/works" element={<Works />} />
-          <Route path="/contacts" element={<Contact />} /> */}
         </Routes>
-        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

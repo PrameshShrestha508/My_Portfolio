@@ -17,6 +17,13 @@
   font-size: 1.3rem;
   font-weight: bold;
 }
+.n-name a {
+  text-decoration: none;
+}
+.logo {
+  text-decoration: none;
+  list-style-type: none;
+}
 .n-right {
   flex: 1;
   display: flex;
