@@ -70,12 +70,7 @@ const Services = () => {
           whileInView={{ left: "12rem" }}
           transition={transition}
         >
-          <Card
-            image={QA}
-            heading={"QA"}
-            detail={"Use different QA tools"}
-            color="rgba(252, 166, 31, 0.45)"
-          />
+          <Card image={QA} heading={"QA"} detail={"Use different QA tools"} />
         </motion.div>
         <div
           className="blur s-blur2"

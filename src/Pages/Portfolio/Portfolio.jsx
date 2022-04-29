@@ -3,7 +3,6 @@ import axios from "axios";
 import Cards from "../../Component/PortfolioCard/PortfolioCard";
 import "./Portfolio.css";
 
-import "swiper/css";
 import Coffee from "../../Assets/Images/coffee.png";
 const Portfolio = () => {
   const [post, setPost] = useState([]);
