@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
+import { themeContext } from "../../Context";
 
 import { Link } from "react-router-dom";
 function Navbar() {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   const [isMobile, setIsMobile] = useState(false);
   const [activeLink, activeLinkSet] = useState("home");
   return (
@@ -31,6 +34,7 @@ function Navbar() {
                   onClick={() => {
                     activeLinkSet("home");
                   }}
+                  style={{ color: darkMode ? "white" : "" }}
                   to="/"
                 >
                   Home
@@ -43,6 +47,7 @@ function Navbar() {
                   onClick={() => {
                     activeLinkSet("about");
                   }}
+                  style={{ color: darkMode ? "white" : "" }}
                 >
                   About
                 </Link>
@@ -54,6 +59,7 @@ function Navbar() {
                   onClick={() => {
                     activeLinkSet("services");
                   }}
+                  style={{ color: darkMode ? "white" : "" }}
                 >
                   Serivces
                 </Link>
@@ -66,6 +72,7 @@ function Navbar() {
                   onClick={() => {
                     activeLinkSet("portfolio");
                   }}
+                  style={{ color: darkMode ? "white" : "" }}
                 >
                   Portfolio
                 </Link>
@@ -78,6 +85,7 @@ function Navbar() {
                   onClick={() => {
                     activeLinkSet("contact");
                   }}
+                  style={{ color: darkMode ? "white" : "" }}
                 >
                   Contact
                 </Link>
