@@ -3,9 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 80vh;
 }
 .aboutImage {
-  height: 150px;
+  height: 170px;
   width: 150px;
   background-image: url("../../Assets/Images/me.png");
   background-size: cover;
