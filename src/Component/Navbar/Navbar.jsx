@@ -5,6 +5,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
+  const [activeLink, activeLinkSet] = useState("home");
   return (
     <>
       <div className="n-wrapper" id="Navbar">
@@ -25,25 +26,61 @@ function Navbar() {
               onClick={() => setIsMobile(false)}
             >
               <li>
-                <Link activeClass="active" to="/">
+                <Link
+                  className={activeLink === "home" ? "active" : null}
+                  onClick={() => {
+                    activeLinkSet("home");
+                  }}
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link
+                  to="/about"
+                  className={activeLink === "about" ? "active" : null}
+                  onClick={() => {
+                    activeLinkSet("about");
+                  }}
+                >
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/services">Serivces</Link>
+                <Link
+                  to="/services"
+                  className={activeLink === "services" ? "active" : null}
+                  onClick={() => {
+                    activeLinkSet("services");
+                  }}
+                >
+                  Serivces
+                </Link>
               </li>
 
               <li>
-                <Link to="/portfolio" className="portfolio">
+                <Link
+                  to="/portfolio"
+                  className={activeLink === "portfolio" ? "active" : null}
+                  onClick={() => {
+                    activeLinkSet("portfolio");
+                  }}
+                >
                   Portfolio
                 </Link>
               </li>
 
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link
+                  to="/contact"
+                  className={activeLink === "contact" ? "active" : null}
+                  onClick={() => {
+                    activeLinkSet("contact");
+                  }}
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>

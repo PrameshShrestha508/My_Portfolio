@@ -4,6 +4,7 @@ import Cards from "../../Component/PortfolioCard/PortfolioCard";
 import "./Portfolio.css";
 
 import Coffee from "../../Assets/Images/coffee.png";
+import Zodiac from "../../Assets/Images/zodiac.png";
 const Portfolio = () => {
   const [post, setPost] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -24,11 +25,11 @@ const Portfolio = () => {
         </div>
       )}
       {!isLoading &&
-        post.map((curElem) => {
+        post.map((curElem, index) => {
           return (
             <div className="port_card">
               <Cards
-                imgsrc={Coffee}
+                imgsrc={index % 2 === 0 ? Coffee : Zodiac}
                 date={new Date(curElem.projectDate).toDateString()}
                 projectTitle={curElem.projectTitle}
                 projectLink={curElem.projectLink}

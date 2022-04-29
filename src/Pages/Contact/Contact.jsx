@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import "./Contact.css";
 import axios from "axios";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
 const Contact = () => {
@@ -29,7 +30,8 @@ const Contact = () => {
           email: formValues.email,
           message: formValues.textarea,
         })
-        .then((res) => console.log(res))
+        .then((res) => toast("message sent successfully"))
+        // .then((res) => console.log(res))
         .catch((err) => console.log(err));
       setFormValues(initialValues);
     }
@@ -70,6 +72,7 @@ const Contact = () => {
         </div>
         {/* right side form */}
         <div className="c-right">
+          <ToastContainer />
           <form method="POST">
             <input
               type="text"

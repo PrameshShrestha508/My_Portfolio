@@ -45,6 +45,9 @@
   text-decoration: none;
   color: var(--black);
 }
+.n-list .active {
+  color: #fb982f !important;
+}
 .n-list > ul :hover {
   color: var(--orange);
   cursor: pointer;
