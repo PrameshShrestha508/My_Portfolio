@@ -17,14 +17,14 @@ const Footer = () => {
           </a>
           <a
             href="https://www.facebook.com/pramesh.shrestha.566"
-            target=""
+            target="_blank"
             rel="noreferrer"
           >
             <Icon icon="fab fa-facebook icons" />
           </a>
           <a
             href="https://github.com/PrameshShrestha508"
-            target=""
+            target="_blank"
             rel="noreferrer"
           >
             <Icon icon="fab fa-github icons" />
