@@ -1,31 +1,35 @@
 .footer {
   display: flex;
   align-items: center;
-  margin: -0.5rem -3.5rem;
-  position: relative;
-  margin-top: -7rem;
+  margin: 1rem -3.2rem -0.4rem -3.2rem;
+  background-color: #a06a12;
 }
 .f-content {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 4rem;
-  gap: 4rem;
+  margin-top: 2rem;
+  gap: 1rem;
   color: white;
 }
 .f-icons {
   display: flex;
   gap: 2rem;
+  color: aliceblue;
+}
+.f-icons .icons {
+  color: #fff;
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 480px) {
   .f-content {
     transform: scale(0.5);
   }
-  .footer .f-content {
+  .footer .f-content .icons {
     float: none; /* Ensure stacking */
     display: block; /* Ensure stacking */
     text-align: center;

@@ -52,18 +52,6 @@ function Navbar() {
                   About
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/services"
-                  className={activeLink === "services" ? "active" : null}
-                  onClick={() => {
-                    activeLinkSet("services");
-                  }}
-                  style={{ color: darkMode ? "white" : "" }}
-                >
-                  Serivces
-                </Link>
-              </li>
 
               <li>
                 <Link

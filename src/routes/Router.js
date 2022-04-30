@@ -9,10 +9,7 @@ const Routes = [
     path: "/",
     element: Intro,
   },
-  {
-    path: "/services",
-    element: Services,
-  },
+
   {
     path: "/portfolio",
     element: PortfolioWrapper,

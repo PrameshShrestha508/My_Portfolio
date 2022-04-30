@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../Component/Footer/Footer";
 
 import Icon from "../../Component/Icon/Icon";
 import "./About.css";
@@ -23,36 +24,7 @@ function About() {
         </p>
       </div>
 
-      <div className="aboutIcon">
-        <a
-          href="https://www.instagram.com/pramesh.shrestha.566/?hl=en"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon icon="fab fa-instagram" />
-        </a>
-        <a
-          href="https://www.facebook.com/pramesh.shrestha.566"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon icon="fab fa-facebook" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/pramesh-shrestha-249b7b177/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon icon="fab fa-linkedin" />
-        </a>
-        <a
-          href="https://github.com/PrameshShrestha508"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon icon="fab fa-github" />
-        </a>
-      </div>
+      <Footer />
     </>
   );
 }

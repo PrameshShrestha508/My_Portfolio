@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+import Footer from "../../Component/Footer/Footer";
 
 const Contact = () => {
   const theme = useContext(themeContext);
@@ -118,6 +119,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

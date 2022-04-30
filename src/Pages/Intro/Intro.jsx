@@ -6,13 +6,10 @@ import Github from "../../Assets/Images/github.png";
 import LinkedIn from "../../Assets/Images/linkedin.png";
 import Instagram from "../../Assets/Images/instagram.png";
 import { themeContext } from "../../Context";
-import Services from "../../Pages/Services/Services";
-// import Portfolio from "../../Pages/Portfolio/Portfolio";
-import Contact from "../../Pages/Contact/Contact";
 import Footer from "../../Component/Footer/Footer";
 import { Link } from "react-scroll";
-import PortfolioWrapper from "../Portfolio/PortfolioWrapper";
-// import Footer from "../Footer/Footer";
+import Services from "../Services/Services";
+
 const Intro = () => {
   // Transition
 
@@ -70,8 +67,6 @@ const Intro = () => {
         </div>
       </div>
       <Services />
-      <PortfolioWrapper />
-      <Contact />
       <Footer />
     </>
   );
