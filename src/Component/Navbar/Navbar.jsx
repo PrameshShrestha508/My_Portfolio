@@ -1,14 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
 import { themeContext } from "../../Context";
-
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 function Navbar() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  const location = useLocation();
   const [isMobile, setIsMobile] = useState(false);
-  const [activeLink, activeLinkSet] = useState("home");
+  const [activeLink, activeLinkSet] = useState("/");
+  useEffect(() => {
+    let path = location.pathname;
+    if (path !== activeLink) {
+      activeLinkSet(path);
+    }
+  }, [activeLinkSet, location.pathname, activeLink]);
+
   return (
     <>
       <div className="n-wrapper" id="Navbar">
@@ -30,9 +38,9 @@ function Navbar() {
             >
               <li>
                 <Link
-                  className={activeLink === "home" ? "active" : null}
+                  className={activeLink === "/" ? "active" : null}
                   onClick={() => {
-                    activeLinkSet("home");
+                    activeLinkSet("/");
                   }}
                   style={{ color: darkMode ? "white" : "" }}
                   to="/"
@@ -43,9 +51,9 @@ function Navbar() {
               <li>
                 <Link
                   to="/about"
-                  className={activeLink === "about" ? "active" : null}
+                  className={activeLink === "/about" ? "active" : null}
                   onClick={() => {
-                    activeLinkSet("about");
+                    activeLinkSet("/about");
                   }}
                   style={{ color: darkMode ? "white" : "" }}
                 >
@@ -56,9 +64,9 @@ function Navbar() {
               <li>
                 <Link
                   to="/portfolio"
-                  className={activeLink === "portfolio" ? "active" : null}
+                  className={activeLink === "/portfolio" ? "active" : null}
                   onClick={() => {
-                    activeLinkSet("portfolio");
+                    activeLinkSet("/portfolio");
                   }}
                   style={{ color: darkMode ? "white" : "" }}
                 >
@@ -69,9 +77,9 @@ function Navbar() {
               <li>
                 <Link
                   to="/contact"
-                  className={activeLink === "contact" ? "active" : null}
+                  className={activeLink === "/contact" ? "active" : null}
                   onClick={() => {
-                    activeLinkSet("contact");
+                    activeLinkSet("/  contact");
                   }}
                   style={{ color: darkMode ? "white" : "" }}
                 >
