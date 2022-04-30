@@ -7,7 +7,7 @@ import LinkedIn from "../../Assets/Images/linkedin.png";
 import Instagram from "../../Assets/Images/instagram.png";
 import { themeContext } from "../../Context";
 import Footer from "../../Component/Footer/Footer";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import Services from "../Services/Services";
 
 const Intro = () => {
@@ -33,7 +33,7 @@ const Intro = () => {
               real-world experience
             </span>
           </div>
-          <Link to="contact" smooth={true} spy={true}>
+          <Link to="/contact" smooth={true} spy={true}>
             <button className="button i-button">Hire me</button>
           </Link>
           {/* social icons */}

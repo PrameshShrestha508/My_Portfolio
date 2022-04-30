@@ -17,7 +17,6 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
   };
   const checkValidate = () => {
     setFormErrors(validate(formValues));
@@ -33,7 +32,6 @@ const Contact = () => {
           message: formValues.textarea,
         })
         .then((res) => toast("message sent successfully"))
-        // .then((res) => console.log(res))
         .catch((err) => console.log(err));
       setFormValues(initialValues);
     }
