@@ -1,7 +1,5 @@
 import React from "react";
 import Footer from "../../Component/Footer/Footer";
-
-import Icon from "../../Component/Icon/Icon";
 import "./About.css";
 function About() {
   return (

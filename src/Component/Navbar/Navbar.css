@@ -4,6 +4,7 @@
   justify-content: space-between;
   margin-bottom: 2rem;
   top: 0;
+  padding: 0.5rem 3.5rem;
 }
 .n-left {
   flex: 1;
@@ -60,6 +61,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  .n-wrapper {
+    padding: 0;
+  }
   .n-list {
     display: none;
   }

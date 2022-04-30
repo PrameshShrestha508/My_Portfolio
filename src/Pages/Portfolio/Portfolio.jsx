@@ -10,7 +10,7 @@ const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    axios.get("http://localhost:4000/project/3").then((res) => {
+    axios.get("http://localhost:4000/project/6").then((res) => {
       setIsLoading(false);
       setPost(res.data);
     });
