@@ -24,4 +24,4 @@ Getting Started with Create React App
 This project was bootstrapped with Create React App.
 
 
-<img width="934" alt="image" src="https://user-images.githubusercontent.com/70266134/209472373-63b4d6b2-ee3b-4d7d-8052-9f4b2fbc6dce.png">
+
